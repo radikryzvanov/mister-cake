@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mr.Cake — кофейня в Ульяновске</title>
+<meta name="description" content="Mr.Cake (Мистер Кейк): халяль кофейня в Ульяновске, ул. Хваткова, 1В. Горячие обеды, пицца из печи, торты и десерты собственного производства. Ежедневно 10:00–21:00.">
+<meta name="theme-color" content="#087C83">
+<link rel="icon" href="assets/25834d55af38d1f911d963df9f0961bc.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Podkova:wght@800&family=Caveat:wght@600;700&family=Manrope:wght@800&family=Amiri:wght@700&display=swap">
+<style>
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Nunito',system-ui,sans-serif;background:#FFFFFF;color:#2A1A12}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.88}
+img{max-width:100%}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #087C83;outline-offset:2px}
+
+.wm{font-family:'Podkova','Noto Serif',Georgia,serif;font-weight:800;letter-spacing:-.01em}
+.seal{flex:none;width:84px;height:84px;transform:rotate(-8deg);filter:drop-shadow(0 6px 10px rgba(0,0,0,.45)) drop-shadow(0 0 14px rgba(18,183,106,.45));transition:transform .4s cubic-bezier(.3,1.5,.5,1)}
+.seal:hover{transform:rotate(8deg) scale(1.08)}
+.chs{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.ch{display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px 14px;border-radius:999px;color:#fff;font-weight:900;font-size:16px;text-align:center;box-sizing:border-box}
+.ch-wa{background:#1B7F46}.ch-tg{background:#1A7DB0}.ch-max{background:#3A55E0}
+.hbtn{display:inline-block;text-align:center;transition:transform .28s cubic-bezier(.3,1.7,.5,1),box-shadow .25s,background .2s,color .2s}
+.hbtn:hover{opacity:1;transform:translateY(-5px) scale(1.07) rotate(-1.5deg);box-shadow:0 12px 22px rgba(0,0,0,.28)}
+.hbtn:active{transform:translateY(0) scale(.97) rotate(0);box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.hbtn-o:hover{background:#FFFFFF;color:#087C83!important}
+.hero-btns{display:flex;flex-wrap:wrap;gap:10px}
+.hero-btns .hbtn{flex:0 1 auto;white-space:nowrap;font-size:clamp(13px,1.2vw,16px);padding:clamp(11px,1.25vw,15px) clamp(12px,1.3vw,20px)}
+@media (min-width:1100px){.hero-btns{flex-wrap:nowrap}}
+@media (max-width:1099px){.hero-btns .hbtn{font-size:16px;padding:13px 20px}}
+.ribbons{position:relative;z-index:2;height:200px;margin-top:-20px;overflow:hidden;background:linear-gradient(to bottom,transparent 20px,#FFFFFF 20px)}
+.ticker{position:absolute;left:-6%;width:112%;overflow:hidden;padding:15px 0}
+.ticker-1{top:36px;transform:rotate(-1.6deg);background:#FFC83D;color:#2A1A12;box-shadow:0 -12px 40px rgba(8,124,131,.25)}
+.ticker-2{top:112px;transform:rotate(-1.6deg);background:#E0F4F1;color:#2A1A12;box-shadow:0 12px 40px rgba(8,124,131,.2)}
+.ticker-track{display:flex;width:max-content;animation:slide 38s linear infinite}
+.ticker-2 .ticker-track{animation-direction:reverse;animation-duration:46s}
+.ticker span{display:inline-flex;align-items:center;gap:1.6rem;padding-right:1.6rem;font-family:'Nunito',system-ui,sans-serif;font-weight:900;font-size:1.15rem;white-space:nowrap}
+.ticker span::after{content:"";width:.6rem;height:.6rem;background:#2A1A12;transform:rotate(45deg)}
+.ticker-2 span::after{background:#1E8F5A}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (min-width:860px){.ribbons{height:210px}.ticker span{font-size:1.3rem}}
+@media (prefers-reduced-motion:reduce){.ticker-track{animation-duration:120s}.ticker-2 .ticker-track{animation-duration:150s}}
+#toast{position:fixed;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));margin:0 auto;max-width:420px;background:#2A1A12;color:#fff;font-weight:700;font-size:15px;line-height:1.4;padding:14px 18px;border-radius:16px;text-align:center;opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}
+#toast.on{opacity:1}
+</style>
+</head>
+<body>
+
+
+
+<div style="width:100%;background:#FFFFFF;color:#2A1A12;font-family:'Nunito',system-ui,sans-serif;display:flex;flex-direction:column">
+
+<!-- ШАПКА + ГЕРОЙ -->
+<section id="top" style="position:relative;background:#087C83;color:#FFFFFF;padding:0 16px 80px;overflow:hidden">
+<div aria-hidden="true" style="position:absolute;width:560px;height:560px;border-radius:50%;background:#0A9AA2;right:-180px;top:-220px"></div>
+<div aria-hidden="true" style="position:absolute;width:150px;height:150px;border-radius:50%;background:#FFC83D;left:-50px;bottom:-50px"></div>
+<div style="position:relative;max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+
+<header style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-top:20px">
+<a href="#top" style="display:flex;align-items:center;gap:14px">
+<img src="assets/25834d55af38d1f911d963df9f0961bc.png" alt="Логотип Mr.Cake" width="64" height="64" style="width:64px;height:64px;border-radius:50%;background:#fff;display:block">
+<span class="wm" style="font-size:38px;line-height:1;color:#FFFFFF">Mr.Cake</span>
+</a>
+<nav style="display:flex;flex-wrap:wrap;gap:0 24px;font-weight:700;font-size:16px">
+<a href="#lunch" style="padding:12px 0">Обеды</a>
+<a href="#salads" style="padding:12px 0">Салаты</a>
+<a href="#pizza" style="padding:12px 0">Пицца</a>
+<a href="#desserts" style="padding:12px 0">Десерты</a>
+<a href="#gallery" style="padding:12px 0">Зал и кухня</a>
+<a href="#contacts" style="padding:12px 0">Контакты</a>
+</nav>
+<a class="hbtn" href="#menu" style="background:#FFC83D;color:#2A1A12;font-weight:900;font-size:16px;padding:14px 26px;border-radius:999px">Заказать</a>
+</header>
+
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:40px">
+<div style="flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+<svg class="seal" viewBox="0 0 100 100" role="img" aria-label="Халяль">
+      <defs>
+      <radialGradient id="halalGreen" cx="50%" cy="35%" r="80%">
+      <stop offset="0" stop-color="#27ad60" />
+      <stop offset="1" stop-color="#12753d" />
+      </radialGradient>
+      <path id="halalArcTop" d="M 19.8 50 A 30.2 30.2 0 0 1 80.2 50" />
+      <path id="halalArcBottom" d="M 15.2 50 A 34.8 34.8 0 0 0 84.8 50" />
+      </defs>
+      <path d="M97.4 50.0 L97.2 51.2 L96.7 52.4 L95.9 53.6 L94.8 54.7 L93.6 55.7 L92.4 56.7 L91.3 57.7 L90.3 58.6 L89.6 59.5 L89.2 60.5 L89.1 61.6 L89.2 62.7 L89.6 64.0 L90.1 65.4 L90.7 66.8 L91.2 68.3 L91.5 69.8 L91.7 71.2 L91.5 72.5 L91.0 73.7 L90.3 74.7 L89.2 75.5 L87.9 76.1 L86.4 76.5 L84.9 76.8 L83.4 77.0 L81.9 77.3 L80.7 77.6 L79.6 78.1 L78.7 78.7 L78.1 79.6 L77.6 80.7 L77.3 81.9 L77.0 83.4 L76.8 84.9 L76.5 86.4 L76.1 87.9 L75.5 89.2 L74.7 90.3 L73.7 91.0 L72.5 91.5 L71.2 91.7 L69.8 91.5 L68.3 91.2 L66.8 90.7 L65.4 90.1 L64.0 89.6 L62.7 89.2 L61.6 89.1 L60.5 89.2 L59.5 89.6 L58.6 90.3 L57.7 91.3 L56.7 92.4 L55.7 93.6 L54.7 94.8 L53.6 95.9 L52.4 96.7 L51.2 97.2 L50.0 97.4 L48.8 97.2 L47.6 96.7 L46.4 95.9 L45.3 94.8 L44.3 93.6 L43.3 92.4 L42.3 91.3 L41.4 90.3 L40.5 89.6 L39.5 89.2 L38.4 89.1 L37.3 89.2 L36.0 89.6 L34.6 90.1 L33.2 90.7 L31.7 91.2 L30.2 91.5 L28.8 91.7 L27.5 91.5 L26.3 91.0 L25.3 90.3 L24.5 89.2 L23.9 87.9 L23.5 86.4 L23.2 84.9 L23.0 83.4 L22.7 81.9 L22.4 80.7 L21.9 79.6 L21.3 78.7 L20.4 78.1 L19.3 77.6 L18.1 77.3 L16.6 77.0 L15.1 76.8 L13.6 76.5 L12.1 76.1 L10.8 75.5 L9.7 74.7 L9.0 73.7 L8.5 72.5 L8.3 71.2 L8.5 69.8 L8.8 68.3 L9.3 66.8 L9.9 65.4 L10.4 64.0 L10.8 62.7 L10.9 61.6 L10.8 60.5 L10.4 59.5 L9.7 58.6 L8.7 57.7 L7.6 56.7 L6.4 55.7 L5.2 54.7 L4.1 53.6 L3.3 52.4 L2.8 51.2 L2.6 50.0 L2.8 48.8 L3.3 47.6 L4.1 46.4 L5.2 45.3 L6.4 44.3 L7.6 43.3 L8.7 42.3 L9.7 41.4 L10.4 40.5 L10.8 39.5 L10.9 38.4 L10.8 37.3 L10.4 36.0 L9.9 34.6 L9.3 33.2 L8.8 31.7 L8.5 30.2 L8.3 28.8 L8.5 27.5 L9.0 26.3 L9.7 25.3 L10.8 24.5 L12.1 23.9 L13.6 23.5 L15.1 23.2 L16.6 23.0 L18.1 22.7 L19.3 22.4 L20.4 21.9 L21.3 21.3 L21.9 20.4 L22.4 19.3 L22.7 18.1 L23.0 16.6 L23.2 15.1 L23.5 13.6 L23.9 12.1 L24.5 10.8 L25.3 9.7 L26.3 9.0 L27.5 8.5 L28.8 8.3 L30.2 8.5 L31.7 8.8 L33.2 9.3 L34.6 9.9 L36.0 10.4 L37.3 10.8 L38.4 10.9 L39.5 10.8 L40.5 10.4 L41.4 9.7 L42.3 8.7 L43.3 7.6 L44.3 6.4 L45.3 5.2 L46.4 4.1 L47.6 3.3 L48.8 2.8 L50.0 2.6 L51.2 2.8 L52.4 3.3 L53.6 4.1 L54.7 5.2 L55.7 6.4 L56.7 7.6 L57.7 8.7 L58.6 9.7 L59.5 10.4 L60.5 10.8 L61.6 10.9 L62.7 10.8 L64.0 10.4 L65.4 9.9 L66.8 9.3 L68.3 8.8 L69.8 8.5 L71.2 8.3 L72.5 8.5 L73.7 9.0 L74.7 9.7 L75.5 10.8 L76.1 12.1 L76.5 13.6 L76.8 15.1 L77.0 16.6 L77.3 18.1 L77.6 19.3 L78.1 20.4 L78.7 21.3 L79.6 21.9 L80.7 22.4 L81.9 22.7 L83.4 23.0 L84.9 23.2 L86.4 23.5 L87.9 23.9 L89.2 24.5 L90.3 25.3 L91.0 26.3 L91.5 27.5 L91.7 28.8 L91.5 30.2 L91.2 31.7 L90.7 33.2 L90.1 34.6 L89.6 36.0 L89.2 37.3 L89.1 38.4 L89.2 39.5 L89.6 40.5 L90.3 41.4 L91.3 42.3 L92.4 43.3 L93.6 44.3 L94.8 45.3 L95.9 46.4 L96.7 47.6 L97.2 48.8 Z" fill="url(#halalGreen)" />
+      <circle cx="50" cy="50" r="38.5" fill="#ffffff" />
+      <circle cx="50" cy="50" r="27.2" fill="url(#halalGreen)" />
+      <circle cx="50" cy="50" r="25.2" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.7" />
+      <text font-size="6.4" font-weight="800" letter-spacing="1.3" fill="#12753d" font-family="'Manrope', system-ui, sans-serif">
+      <textPath href="#halalArcTop" startOffset="50%" text-anchor="middle">HALAL FOOD</textPath>
+      </text>
+      <text font-size="5.6" font-weight="800" letter-spacing="1" fill="#12753d" font-family="'Manrope', system-ui, sans-serif">
+      <textPath href="#halalArcBottom" startOffset="50%" text-anchor="middle">ХАЛЯЛЬ КУХНЯ</textPath>
+      </text>
+      <text x="17.6" y="52.2" font-size="6" text-anchor="middle" fill="#12753d">★</text>
+      <text x="82.4" y="52.2" font-size="6" text-anchor="middle" fill="#12753d">★</text>
+      <text x="50" y="54" text-anchor="middle" font-size="23" font-weight="700" fill="#ffffff" font-family="'Amiri', 'Noto Naskh Arabic', 'Traditional Arabic', serif">حلال</text>
+      <text x="50" y="64.5" text-anchor="middle" font-size="6.2" font-weight="800" letter-spacing="1.6" fill="#ffffff" font-family="'Manrope', system-ui, sans-serif">HALAL</text>
+      </svg>
+<span style="font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:#E3F4F3;font-weight:800">Кофейня с любовью · ул. Хваткова, 1В</span>
+</div>
+<span class="wm" style="font-size:clamp(56px,11vw,112px);line-height:1;color:#FFC83D">Mr.Cake</span>
+<h1 style="margin:0;font-weight:900;font-size:clamp(26px,3.6vw,40px);line-height:1.15;text-wrap:balance">Сытный обед в перерыв, пицца и десерты для всей семьи</h1>
+<p style="margin:0;font-size:19px;line-height:1.6;color:#E3F4F3;max-width:520px">Горячие обеды: простой и богатырский. Пицца прямо из печи, торты и десерты собственного производства. Халяль, детский уголок и яркий зал с росписью на стене.</p>
+<div class="hero-btns">
+<a class="hbtn" href="#lunch" style="background:#FFC83D;color:#2A1A12;font-weight:900;border:2px solid #FFC83D;border-radius:999px">Горячие обеды</a>
+<a class="hbtn hbtn-o" href="#salads" style="border:2px solid #FFFFFF;color:#FFFFFF;font-weight:800;border-radius:999px">Салаты</a>
+<a class="hbtn hbtn-o" href="#pizza" style="border:2px solid #FFFFFF;color:#FFFFFF;font-weight:800;border-radius:999px">Выбрать пиццу</a>
+<a class="hbtn hbtn-o" href="#desserts" style="border:2px solid #FFFFFF;color:#FFFFFF;font-weight:800;border-radius:999px">Десерты</a>
+</div>
+</div>
+
+<div style="flex:1 1 320px;min-width:0;display:flex;justify-content:center">
+<div style="width:100%;max-width:400px;padding:10px;border:3px solid #FFC83D;border-radius:999px 999px 40px 40px;box-sizing:border-box">
+<img src="assets/ee3597148682e395d69cd932f176511b.webp" alt="Пицца в зале Mr.Cake на фоне яркой росписи" style="display:block;width:100%;height:520px;object-fit:cover;border-radius:999px 999px 30px 30px">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="ribbons" aria-hidden="true">
+<div class="ticker ticker-1"><div class="ticker-track" id="tick-a"></div></div>
+<div class="ticker ticker-2"><div class="ticker-track" id="tick-b"></div></div>
+</div>
+
+<!-- ЦИФРЫ И ПРЕИМУЩЕСТВА -->
+<section style="padding:56px 16px 56px">
+<div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-wrap:wrap;gap:20px">
+<div style="flex:1 1 240px;min-width:0;display:flex;gap:14px;align-items:flex-start">
+<svg width="36" height="36" viewBox="0 0 28 28" fill="none" stroke="#1E8F5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 36px"><path d="M21 15a8.5 8.5 0 1 1-8.5-9.5A7 7 0 0 0 21 15z"/></svg>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-weight:800;font-size:18px">Халяль</span><span style="font-size:15px;line-height:1.5;color:#5E5148">Кухня, которой можно доверять всей семьёй.</span></div>
+</div>
+<div style="flex:1 1 240px;min-width:0;display:flex;gap:14px;align-items:flex-start">
+<svg width="36" height="36" viewBox="0 0 28 28" fill="none" stroke="#C72A63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 36px"><circle cx="14" cy="14" r="10"/><path d="M9 16.5c1.3 2.3 3 3.3 5 3.3s3.7-1 5-3.3"/><circle cx="10.5" cy="11.5" r="1" fill="#C72A63"/><circle cx="17.5" cy="11.5" r="1" fill="#C72A63"/></svg>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-weight:800;font-size:18px">Детский уголок</span><span style="font-size:15px;line-height:1.5;color:#5E5148">Пока взрослые пьют кофе, дети заняты игрой.</span></div>
+</div>
+<div style="flex:1 1 240px;min-width:0;display:flex;gap:14px;align-items:flex-start">
+<svg width="36" height="36" viewBox="0 0 28 28" fill="none" stroke="#087C83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 36px"><path d="M4 11a14 14 0 0 1 20 0M7.5 15a9 9 0 0 1 13 0M11 19a4 4 0 0 1 6 0"/><circle cx="14" cy="22.5" r="1.2" fill="#087C83"/></svg>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-weight:800;font-size:18px">Wi-Fi и розетки</span><span style="font-size:15px;line-height:1.5;color:#5E5148">Можно прийти с ноутбуком и поработать.</span></div>
+</div>
+<div style="flex:1 1 240px;min-width:0;display:flex;gap:14px;align-items:flex-start">
+<svg width="36" height="36" viewBox="0 0 28 28" fill="none" stroke="#D13A16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 36px"><path d="M5 9h14v6a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6zM19 11h2a3 3 0 0 1 0 6h-2M9 3.5v2.5M13 3.5v2.5"/></svg>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-weight:800;font-size:18px">С собой и на доставку</span><span style="font-size:15px;line-height:1.5;color:#5E5148">Кофе, чай и пицца навынос, оплата картой.</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- МЕНЮ И ЗАКАЗ -->
+<section id="menu" style="background:#FFF6DB;padding:64px 16px 80px">
+<div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<span style="font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#087C83;font-weight:900">Меню и заказ</span>
+<h2 style="margin:0;font-weight:900;font-size:clamp(30px,4vw,44px);line-height:1.15;text-wrap:balance">Выберите обед или пиццу</h2>
+<p style="margin:0;font-size:17px;line-height:1.6;color:#5E5148;max-width:620px">Нажмите «плюс» рядом с нужным блюдом. Всё соберётся в одну корзину, останется выбрать мессенджер.</p>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start">
+<div style="flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:20px">
+<div id="lunch" style="display:flex;flex-direction:column;gap:4px;scroll-margin-top:16px"><h3 style="margin:0;font-weight:900;font-size:28px">Горячие обеды</h3><span style="font-size:16px;color:#5E5148">Сытно и горячо, чтобы пообедать в перерыв.</span></div>
+<div id="lunch-cards" style="display:flex;flex-wrap:wrap;gap:18px"></div>
+<div id="salads" style="display:flex;flex-direction:column;gap:4px;margin-top:12px;scroll-margin-top:16px"><h3 style="margin:0;font-weight:900;font-size:28px">Салаты</h3><span style="font-size:16px;color:#5E5148">К обеду или отдельно.</span></div>
+<div id="salad-cards" style="display:flex;flex-wrap:wrap;gap:18px"></div>
+<div id="pizza" style="display:flex;flex-direction:column;gap:4px;margin-top:12px;scroll-margin-top:16px"><h3 style="margin:0;font-weight:900;font-size:28px">Пицца</h3><span style="font-size:16px;color:#5E5148">Горячая, прямо из печи.</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:18px">
+<div id="cards" style="display:contents"></div>
+</div>
+<div id="desserts" style="display:flex;flex-direction:column;gap:4px;margin-top:12px;scroll-margin-top:16px"><h3 style="margin:0;font-weight:900;font-size:28px">Десерты</h3><span style="font-size:16px;color:#5E5148">Торты и десерты собственного производства.</span></div>
+<div id="dessert-cards" style="display:flex;flex-wrap:wrap;gap:18px"></div>
+
+<div style="background:#fff;border:2px solid #FFD0DC;border-radius:24px;overflow:hidden;display:flex;flex-direction:column">
+<img src="assets/6b6e6da7980faefc6a7834bd3949e453.webp" alt="Стеклянный чайник с чаем и чашка на столе" style="display:block;width:100%;height:220px;object-fit:cover">
+<div style="padding:20px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px">
+<span style="font-family:'Caveat',cursive;font-weight:700;font-size:34px;line-height:1.1;color:#C72A63">А ещё кофе, чай и десерты</span>
+<span style="font-size:16px;color:#5E5148;font-weight:700">Торты и десерты собственного производства.</span>
+</div>
+</div>
+</div>
+
+<aside style="flex:1 1 320px;max-width:520px;min-width:0;position:sticky;top:16px;background:#fff;border:3px solid #087C83;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px;box-sizing:border-box">
+<h3 style="margin:0;font-weight:900;font-size:26px">Ваш заказ</h3>
+ <div id="empty-box">
+<p style="margin:0;font-size:16px;line-height:1.5;color:#5E5148">Пока пусто. Добавьте пиццу из меню.</p>
+</div>
+<div id="items-box" hidden>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div id="lines" style="display:flex;flex-direction:column;gap:10px"></div>
+</div>
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:14px;border-top:2px dashed #F3DD9A">
+<span id="total-label" style="font-weight:700;font-size:16px">Итого</span>
+<span style="font-weight:900;font-size:30px;color:#D13A16;font-variant-numeric:tabular-nums" id="total">0 ₽</span>
+</div>
+</div>
+<div class="chs" id="cart-chs"></div>
+<p style="margin:0;font-size:14px;line-height:1.5;color:#5E5148">WhatsApp откроется с готовым сообщением. В Telegram и MAX сообщение копируется: откройте чат и вставьте его. Самовывоз или доставку и время подтвердят в чате.</p>
+</aside>
+</div>
+</div>
+</section>
+
+<!-- ГАЛЕРЕЯ: ЗАЛ -->
+<section id="gallery" style="background:#E0F4F1;padding:72px 16px">
+<div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-family:'Caveat',cursive;font-weight:700;font-size:34px;color:#087C83;line-height:1">с любовью</span>
+<h2 style="margin:0;font-weight:900;font-size:clamp(30px,4vw,44px);line-height:1.15;text-wrap:balance">Загляните к нам</h2>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:20px">
+<div style="flex:1 1 260px;min-width:0"><img src="assets/hall-1.jpg" alt="Зал кофейни: стена с росписью, закат над волной, столики и бежевые стулья" loading="lazy" style="display:block;width:100%;height:400px;object-fit:cover;border-radius:24px"></div>
+<div style="flex:1 1 260px;min-width:0"><img src="assets/hall-2.jpg" alt="Зал кофейни: яркая роспись на стене, зелень под потолком и круглый столик" loading="lazy" style="display:block;width:100%;height:400px;object-fit:cover;border-radius:24px"></div>
+<div style="flex:1 1 260px;min-width:0"><img src="assets/hall-3.jpg" alt="Уголок зала у стены с росписью и рельефной горой" loading="lazy" style="display:block;width:100%;height:400px;object-fit:cover;border-radius:24px"></div>
+</div>
+</div>
+</section>
+
+<!-- ГАЛЕРЕЯ: ЕДА -->
+<section id="food" style="background:#FFF0F4;padding:72px 16px">
+<div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-family:'Caveat',cursive;font-weight:700;font-size:34px;color:#C72A63;line-height:1">из нашей кухни</span>
+<h2 style="margin:0;font-weight:900;font-size:clamp(30px,4vw,44px);line-height:1.15;text-wrap:balance">Вкусно и сытно</h2>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:20px">
+<div style="flex:1 1 260px;min-width:0"><img src="assets/fecc881d05b864465c7c0946143234bb.webp" alt="Пицца с мясом, грибами и огурцами на деревянной доске" loading="lazy" style="display:block;width:100%;height:400px;object-fit:cover;border-radius:24px"></div>
+<div style="flex:1 1 260px;min-width:0"><img src="assets/g-clay.jpg" alt="Горячее блюдо в глиняной чашке, на заднем плане салат с баклажанами" loading="lazy" style="display:block;width:100%;height:400px;object-fit:cover;border-radius:24px"></div>
+<div style="flex:1 1 260px;min-width:0"><img src="assets/g-latte.jpg" alt="Латте в высоком стакане на фоне стены с пальмами" loading="lazy" style="display:block;width:100%;height:400px;object-fit:cover;border-radius:24px"></div>
+<div style="flex:1 1 260px;min-width:0"><img src="assets/g-iced.jpg" alt="Айс-кофе в стакане с логотипом Mr.Cake" loading="lazy" style="display:block;width:100%;height:400px;object-fit:cover;border-radius:24px"></div>
+<div style="flex:1 1 260px;min-width:0"><img src="assets/g-honey.jpg" alt="Кусок слоёного торта и капучино в стакане с двойными стенками" loading="lazy" style="display:block;width:100%;height:400px;object-fit:cover;border-radius:24px"></div>
+<div style="flex:1 1 260px;min-width:0"><img src="assets/5787337bca0b8098f8236c4efd1f0666.webp" alt="Горячее блюдо в глиняной посуде и салат" loading="lazy" style="display:block;width:100%;height:400px;object-fit:cover;border-radius:24px"></div>
+</div>
+</div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="contacts" style="padding:80px 16px">
+<div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
+<div style="flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:24px">
+<h2 style="margin:0;font-weight:900;font-size:clamp(30px,4vw,44px);line-height:1.15">Как нас найти</h2>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#5E5148;font-weight:800">Адрес</span><span style="font-size:20px;font-weight:700;line-height:1.4">Ульяновск, ул. Хваткова, 1В, стр. 1, 1 этаж</span></div>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#5E5148;font-weight:800">Телефоны</span><span style="font-size:20px;font-weight:700">+7 (8422) 70-97-97</span><span style="font-size:20px;font-weight:700">+7 937 878-11-10 <span style="font-size:15px;font-weight:600;color:#5E5148">WhatsApp</span></span></div>
+<div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#5E5148;font-weight:800">Часы работы</span><span style="font-size:20px;font-weight:700">Ежедневно с 10:00 до 21:00</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a href="https://wa.me/79378781110" style="background:#1B7F46;color:#fff;font-weight:900;padding:15px 26px;border-radius:999px">WhatsApp</a>
+<a href="https://t.me/mr_cake73" style="background:#087C83;color:#fff;font-weight:900;padding:15px 26px;border-radius:999px">Telegram</a>
+<span id="max-contact" hidden></span>
+<a href="https://vk.com/mr.cake_coffee" style="border:2px solid #2A1A12;font-weight:900;padding:13px 24px;border-radius:999px">ВКонтакте</a>
+</div>
+</div>
+<div style="flex:1 1 320px;min-width:0;background:#FF8A5C;color:#2A1A12;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:18px;box-sizing:border-box">
+<h3 style="margin:0;font-weight:900;font-size:26px">Как добраться</h3>
+<p style="margin:0;font-size:17px;line-height:1.6;font-weight:600">Мы в 5-м микрорайоне (УЗТС), Засвияжский район. Остановка «УКСМ» в 77 метрах от входа. Рядом остановки «Улица Шигаева» и «Улица Горина».</p>
+<p style="margin:0;font-size:17px;line-height:1.6;font-weight:600">Если вы на машине, у нас есть парковка.</p>
+<a href="https://yandex.ru/maps/org/mr_cake/166152342603/" style="align-self:flex-start;background:#2A1A12;color:#fff;font-weight:900;padding:15px 26px;border-radius:999px">Открыть на Яндекс Картах</a>
+</div>
+</div>
+</section>
+
+<footer style="background:#0B3D41;color:#CDE9E7;padding:28px 16px">
+<div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;font-size:15px">
+<span style="display:flex;align-items:center;gap:12px"><img src="assets/25834d55af38d1f911d963df9f0961bc.png" alt="" width="40" height="40" style="width:40px;height:40px;border-radius:50%;background:#fff;display:block"><span class="wm" style="font-size:26px;color:#FFC83D;line-height:1">Mr.Cake</span><span>кофейня с любовью, Ульяновск</span></span>
+<span>Халяль · для всей семьи</span>
+</div>
+</footer>
+
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+var PHONE='79378781110';
+var TG_URL='https://t.me/mr_cake73';
+var MAX_URL='';
+// Обеды: price = число в рублях; пока null, цену подтверждают в чате. photo = путь к фото блюда или '' (тогда показывается заглушка).
+var LUNCHES=[
+ {key:'lunch-simple',name:'Простой обед',text:'Горячий обед на каждый день, чтобы поесть спокойно и вернуться к делам.',price:null,photo:'assets/5787337bca0b8098f8236c4efd1f0666.webp',alt:'Горячее блюдо в глиняной посуде и салат',ph:'Здесь будет фото обеда'},
+ {key:'lunch-bogatyr',name:'Богатырский обед',text:'Большая порция для тех, кто голоден по-настоящему.',price:null,photo:'',alt:'',ph:'Здесь будет фото обеда'},
+ {key:'hot-czech',name:'Мясо по-чешски',text:'Горячее блюдо. Цена за порцию.',price:450,photo:'',alt:'',ph:'Здесь будет фото блюда'}
+];
+// Салаты: цены пока не заданы (price: null показывает «Цена в чате»).
+var SALADS=[
+ {key:'salad-eggplant',name:'Фирменный салат из баклажанов',text:'Фирменный салат кофейни из баклажанов.',price:null,photo:'assets/card-salad.jpg',alt:'Салат с запечённым баклажаном, капустой и помидорами',ph:'Здесь будет фото салата'},
+ {key:'salad-vitamin',name:'Витаминный салат',text:'Лёгкий овощной салат.',price:null,photo:'',alt:'',ph:'Здесь будет фото салата'}
+];
+// Десерты: названия и цены пока не заданы (price: null показывает «Цена в чате»).
+var DESSERTS=[
+ {key:'dessert-1',name:'Торт 1',text:'Торт собственного производства.',price:null,photo:'assets/cake-1.jpg',alt:'Слоёный торт и стакан латте',ph:'Здесь будет фото торта'},
+ {key:'dessert-2',name:'Торт 2',text:'Торт собственного производства.',price:null,photo:'assets/cake-2.jpg',alt:'Кусок зелёного чизкейка на фоне стены с росписью',ph:'Здесь будет фото торта'},
+ {key:'dessert-3',name:'Торт 3',text:'Торт собственного производства.',price:null,photo:'assets/cake-3.jpg',alt:'Кусок шоколадного торта с кремом',ph:'Здесь будет фото торта'},
+ {key:'dessert-4',name:'Торт 4',text:'Торт собственного производства.',price:null,photo:'assets/cake-4.jpg',alt:'Круглый трёхслойный торт, нарезанный на куски',ph:'Здесь будет фото торта'}
+];
+var pizzas=[
+ {id:'pep',name:'Пепперони',p:[450,640,750]},
+ {id:'haw',name:'Гавайская',p:[520,730,870]},
+ {id:'mush',name:'Грибная',p:[470,690,830]},
+ {id:'four',name:'Сырная (4 сыра)',p:[650,830,1100]},
+ {id:'chick',name:'Цыплёнок',p:[510,720,820]},
+ {id:'ham',name:'Ветчина, грибы',p:[550,770,890]}
+];
+var sizes=[25,35,40], keys=['a','b','c'];
+var qty={};
+var cartMsg='';
+function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' ₽';}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function cardHTML(c){return `<div style="flex:1 1 280px;min-width:0;background:#fff;border:2px solid #F3DD9A;border-radius:22px;padding:18px;display:flex;flex-direction:column;gap:10px;box-sizing:border-box">
+<h3 style="margin:0 0 4px;font-weight:900;font-size:21px">${c.name}</h3>
+<div style="display:flex;align-items:center;gap:6px;padding:4px 6px 4px 12px;border-radius:16px;background:${c.aBg}">
+<span style="flex:0 0 50px;font-weight:700;font-size:15px;color:#5E5148">${c.aSize}</span>
+<span style="flex:1 1 auto;min-width:0;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums">${c.aPrice}</span>
+<button type="button" aria-label="Убрать" data-act="${c.aMinus}" style="flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:2px solid #E8CF8A;background:#fff;color:#2A1A12;font-family:inherit;font-size:22px;line-height:1;cursor:pointer;opacity:${c.aDim}">−</button>
+<span style="min-width:22px;text-align:center;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums">${c.aQty}</span>
+<button type="button" aria-label="Добавить" data-act="${c.aPlus}" style="flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:0;background:#E8472A;color:#fff;font-family:inherit;font-size:24px;line-height:1;cursor:pointer">+</button>
+</div>
+<div style="display:flex;align-items:center;gap:6px;padding:4px 6px 4px 12px;border-radius:16px;background:${c.bBg}">
+<span style="flex:0 0 50px;font-weight:700;font-size:15px;color:#5E5148">${c.bSize}</span>
+<span style="flex:1 1 auto;min-width:0;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums">${c.bPrice}</span>
+<button type="button" aria-label="Убрать" data-act="${c.bMinus}" style="flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:2px solid #E8CF8A;background:#fff;color:#2A1A12;font-family:inherit;font-size:22px;line-height:1;cursor:pointer;opacity:${c.bDim}">−</button>
+<span style="min-width:22px;text-align:center;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums">${c.bQty}</span>
+<button type="button" aria-label="Добавить" data-act="${c.bPlus}" style="flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:0;background:#E8472A;color:#fff;font-family:inherit;font-size:24px;line-height:1;cursor:pointer">+</button>
+</div>
+<div style="display:flex;align-items:center;gap:6px;padding:4px 6px 4px 12px;border-radius:16px;background:${c.cBg}">
+<span style="flex:0 0 50px;font-weight:700;font-size:15px;color:#5E5148">${c.cSize}</span>
+<span style="flex:1 1 auto;min-width:0;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums">${c.cPrice}</span>
+<button type="button" aria-label="Убрать" data-act="${c.cMinus}" style="flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:2px solid #E8CF8A;background:#fff;color:#2A1A12;font-family:inherit;font-size:22px;line-height:1;cursor:pointer;opacity:${c.cDim}">−</button>
+<span style="min-width:22px;text-align:center;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums">${c.cQty}</span>
+<button type="button" aria-label="Добавить" data-act="${c.cPlus}" style="flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:0;background:#E8472A;color:#fff;font-family:inherit;font-size:24px;line-height:1;cursor:pointer">+</button>
+</div>
+</div>`;}
+function chans(){
+ var list=[
+  {c:'wa',t:'WhatsApp',h:'https://wa.me/'+PHONE},
+  {c:'tg',t:'Telegram',h:TG_URL}
+ ];
+ if(MAX_URL){list.push({c:'max',t:'MAX',h:MAX_URL});}
+ return list.map(function(x){
+  return '<a class="ch ch-'+x.c+'" data-chan="'+x.c+'" href="'+x.h+'" target="_blank" rel="noopener">'+x.t+'</a>';
+ }).join('');
+}
+function legacyCopy(t){
+ var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';
+ document.body.appendChild(a);a.select();
+ try{document.execCommand('copy');}catch(e){}
+ document.body.removeChild(a);
+}
+function copyText(t){
+ try{
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+   navigator.clipboard.writeText(t).catch(function(){legacyCopy(t);});
+   return;
+  }
+ }catch(e){}
+ legacyCopy(t);
+}
+var toastT;
+function toast(t){
+ var el=document.getElementById('toast');
+ el.textContent=t;el.classList.add('on');
+ clearTimeout(toastT);toastT=setTimeout(function(){el.classList.remove('on');},4500);
+}
+function stepper(key,n,dim){
+ return '<button type="button" aria-label="Убрать" data-act="'+key+'|-1" style="flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:2px solid #E8CF8A;background:#fff;color:#2A1A12;font-family:inherit;font-size:22px;line-height:1;cursor:pointer;opacity:'+dim+'">−</button><span style="min-width:22px;text-align:center;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums">'+n+'</span><button type="button" aria-label="Добавить" data-act="'+key+'|1" style="flex:0 0 44px;width:44px;height:44px;border-radius:50%;border:0;background:#E8472A;color:#fff;font-family:inherit;font-size:24px;line-height:1;cursor:pointer">+</button>';
+}
+function itemsHTML(list){
+ return list.map(function(l){
+  var n=qty[l.key]||0;
+  var pic=l.photo?'<img src="'+l.photo+'" alt="'+esc(l.alt)+'" style="display:block;width:100%;height:220px;object-fit:cover">':'<div role="img" aria-label="'+esc(l.ph)+'" style="height:220px;background:#FFE9D6;display:flex;align-items:center;justify-content:center;color:#8A5A3C;font-weight:800;font-size:16px;text-align:center;padding:16px;box-sizing:border-box">'+esc(l.ph)+'</div>';
+  var price=l.price?fmt(l.price):'Цена в чате';
+  return '<div style="flex:1 1 280px;min-width:0;background:#fff;border:2px solid #F3DD9A;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-sizing:border-box">'+pic+'<div style="padding:18px;display:flex;flex-direction:column;gap:10px;flex:1 1 auto"><h3 style="margin:0;font-weight:900;font-size:21px">'+esc(l.name)+'</h3><p style="margin:0;font-size:15px;line-height:1.5;color:#5E5148">'+esc(l.text)+'</p><div style="display:flex;align-items:center;gap:6px;padding:4px 6px 4px 12px;border-radius:16px;margin-top:auto;background:'+(n>0?'#FFE3D8':'#FFF9EA')+'"><span style="flex:1 1 auto;min-width:0;font-weight:900;font-size:17px">'+price+'</span>'+stepper(l.key,n,n>0?1:0.4)+'</div></div></div>';
+ }).join('');
+}
+function render(){
+ var lines=[],total=0,unpriced=false,html='';
+ LUNCHES.concat(SALADS,DESSERTS).forEach(function(l){
+  var n=qty[l.key]||0;
+  if(n>0){
+   if(l.price){total+=n*l.price;lines.push({text:l.name,qty:n,sum:fmt(n*l.price),plain:l.name+' × '+n});}
+   else{unpriced=true;lines.push({text:l.name,qty:n,sum:'цена в чате',plain:l.name+' × '+n+' (цену уточнить)'});}
+  }
+ });
+ pizzas.forEach(function(pz){
+  var c={name:esc(pz.name)};
+  sizes.forEach(function(s,i){
+   var key=pz.id+'-'+s,n=qty[key]||0,k=keys[i];
+   c[k+'Size']=s+' см';c[k+'Price']=fmt(pz.p[i]);c[k+'Qty']=n;
+   c[k+'Bg']=n>0?'#FFE3D8':'#FFF9EA';c[k+'Dim']=n>0?1:0.4;
+   c[k+'Plus']=key+'|1';c[k+'Minus']=key+'|-1';
+   if(n>0){total+=n*pz.p[i];lines.push({text:pz.name+', '+s+' см',qty:n,sum:fmt(n*pz.p[i]),plain:pz.name+', '+s+' см × '+n});}
+  });
+  html+=cardHTML(c);
+ });
+ document.getElementById('lunch-cards').innerHTML=itemsHTML(LUNCHES);
+ document.getElementById('salad-cards').innerHTML=itemsHTML(SALADS);
+ document.getElementById('dessert-cards').innerHTML=itemsHTML(DESSERTS);
+ document.getElementById('cards').innerHTML=html;
+ var has=lines.length>0;
+ document.getElementById('empty-box').hidden=has;
+ document.getElementById('items-box').hidden=!has;
+ document.getElementById('lines').innerHTML=lines.map(function(l){
+  return '<div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:16px"><span style="min-width:0;flex:1 1 auto">'+esc(l.text)+' <b>× '+l.qty+'</b></span><span style="font-weight:900;font-variant-numeric:tabular-nums;text-align:right">'+l.sum+'</span></div>';
+ }).join('');
+ document.getElementById('total').textContent=(total>0||!unpriced)?fmt(total):'—';
+ document.getElementById('total-label').textContent=unpriced&&total>0?'Итого без позиций «цена в чате»':'Итого';
+ cartMsg='Здравствуйте! Хочу сделать заказ.';
+ if(has){
+  cartMsg='Здравствуйте! Хочу заказать:\n'+lines.map(function(l){return '• '+l.plain;}).join('\n');
+  if(total>0){cartMsg+='\nИтого'+(unpriced?' без позиций с ценой в чате':'')+': '+total+' ₽';}
+ }
+}
+// Бегущие строки: список повторяется, чтобы лента не обрывалась на широких экранах
+var TICKER_A=['Халяль','Детский уголок','Wi-Fi и розетки','С собой','Доставка'];
+var TICKER_B=['Простой обед','Богатырский обед','Мясо по-чешски','Салат из баклажанов','Витаминный салат','Пепперони','Гавайская','Грибная','4 сыра','Цыплёнок','Ветчина, грибы','Торты'];
+function ticker(list,times){
+ var out='';
+ for(var i=0;i<times;i++){list.forEach(function(w){out+='<span>'+esc(w)+'</span>';});}
+ return out;
+}
+function setup(){
+ document.getElementById('tick-a').innerHTML=ticker(TICKER_A,8);
+ document.getElementById('tick-b').innerHTML=ticker(TICKER_B,4);
+ document.getElementById('cart-chs').innerHTML=chans();
+ if(MAX_URL){
+  var s=document.getElementById('max-contact');
+  s.outerHTML='<a href="'+MAX_URL+'" style="background:#3A55E0;color:#fff;font-weight:900;padding:15px 26px;border-radius:999px">MAX</a>';
+ }
+}
+document.addEventListener('click',function(e){
+ var ch=e.target.closest('[data-chan]');
+ if(ch){
+  if(ch.getAttribute('data-chan')==='wa'){
+   ch.href='https://wa.me/'+PHONE+'?text='+encodeURIComponent(cartMsg);
+  }else{
+   copyText(cartMsg);
+   toast('Заказ скопирован. Откройте чат и вставьте его.');
+  }
+  return;
+ }
+ var b=e.target.closest('[data-act]');
+ if(!b)return;
+ var v=b.getAttribute('data-act').split('|');
+ var key=v[0],d=parseInt(v[1],10);
+ var n=Math.max(0,(qty[key]||0)+d);
+ if(n===0){delete qty[key];}else{qty[key]=n;}
+ render();
+});
+setup();
+render();
+})();
+</script>
+</body>
+</html>
